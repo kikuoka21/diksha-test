@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+
+        <variable
+            name="modelnya"
+            type="id.ac.example.diksha.modal.model.ModelMenu" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="@dimen/size_menu"
+            android:id="@+id/item_row"
+            android:layout_height="@dimen/size_menu"
+
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:orientation="vertical"
+            app:cardCornerRadius="8dp"
+            app:strokeColor="@color/gray_light"
+            app:strokeWidth="1dp">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                setImageDrawable="@{modelnya.idDrawableMenu}"
+                android:scaleType="centerCrop" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="@dimen/size_menu"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|top"
+            android:gravity="center|top"
+            android:maxWidth="100dp"
+            android:minWidth="@dimen/size_menu"
+            android:text="@{modelnya.namaMenuCategory}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_body" />
+
+
+    </LinearLayout>
+</layout>

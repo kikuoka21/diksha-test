@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Diksha Test</string>
+    <string name="showingEntries">Showing %1$d entries</string>
+    <string name="showingEntriesOf">Showing %1$d out of %2$d entries</string>
+</resources>
